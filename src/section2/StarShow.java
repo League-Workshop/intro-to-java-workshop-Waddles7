@@ -25,7 +25,7 @@ public class StarShow {
 		// 12. Use a for loop to repeat steps #19 to #18, 30 times
 		for(int i = 0; i < 30; i++) {
 			// 19. Set the pen width to i 
-	
+			baller.setPenWidth(i);
 			// 10. Set the X position of the robot to your X variable
 			baller.setX(x);
 			// 11. Set the Y position of the robot to your Y variable
@@ -37,11 +37,11 @@ public class StarShow {
 			// 15. decrease the value of the Y position variable by star size. See Figure 3
 			y += starSize;
 			// 16. Increase the star size by 20
-	
+			starSize += 20;
 			// 17. Turn the robot 12 degrees
-	
+			baller.turn(12);
 			// 18. Make each star a different random color like in Figure 4
-
+			baller.setRandomPenColor();
 		}
 	}
 

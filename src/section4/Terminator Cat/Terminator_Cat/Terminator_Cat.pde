@@ -7,8 +7,24 @@ void setup() {
   background(cat);
 }
 
+int acceleration = 7;
+int x = 271;
+int y = 274;
+
 void draw() {
-  ellipse(271, 274, 50, 50);
+  fill(#FC0800);
+  noStroke();
+  ellipse(x, y, 50, 50);
+  ellipse(x + 75, y, 50, 50);
 }
 
-//right eye = x271 y274 left eye = x346 y274
+void keyPressed() {
+  x+=2*acceleration;
+  y+=2*acceleration;
+
+  if (x > width) {
+    background(cat);
+    x = 271;
+    y = 274;
+  }
+}
